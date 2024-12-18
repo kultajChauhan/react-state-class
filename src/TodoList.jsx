@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function TodoList() {
   let [todoInput, setTodoInput] = useState("");
-  let [todoArr, setTodoArr] = useState([{ task: "Sample", id: uuidv4() }]);
+  let [todoArr, setTodoArr] = useState([
+    { task: "Sample", id: uuidv4(), isDone: false },
+  ]);
 
   function inputTodo(event) {
     // console.log(event.target.value)
@@ -13,7 +15,7 @@ export default function TodoList() {
   function addInput() {
     // setTodoArr([...todoArr,todoInput]);
     setTodoArr((prevTodoArr) => {
-      return [...prevTodoArr, { task: todoInput, id: uuidv4() }];
+      return [...prevTodoArr, { task: todoInput, id: uuidv4(), isDone: false }];
     });
     setTodoInput("");
   }
@@ -53,10 +55,26 @@ export default function TodoList() {
     );
   }
 
-  function done(id,event) {
-    console.log("id=>", id);
-    console.log("event=>",event);
+  function done(id, event) {
+    setTodoArr((prevArr) =>
+      prevArr.map((item) => {
+        if (item.id == id) {
+          return {
+            ...item,
+            isDone:true,
+          }
+        }else{
+          return{
+            ...item,
+          }
+        }
+      })
+    );
   }
+
+function allDone(){
+setTodoArr((preArr)=>preArr.map((item)=>{return{...item,isDone:true}}))
+}
 
   return (
     <>
@@ -69,17 +87,18 @@ export default function TodoList() {
       <ul>
         {todoArr.map((list) => (
           <li key={list.id}>
-            <span>{list.task}</span> &nbsp;&nbsp;&nbsp;
+            <span style={list.isDone?{textDecoration:"line-through"}:{}}>{list.task}</span> &nbsp;&nbsp;&nbsp;
             <button onClick={() => deleteTodo(list.id)}>Delete</button>
             <button onClick={() => upperCaseOne(list.id)}>
               Upper Case one
             </button>
-            <button onClick={(event) => done(list.id,event)}>Done!</button>
+            <button onClick={(event) => done(list.id, event)}>Done!</button>
           </li>
         ))}
       </ul>
 
       <button onClick={upperCaseAll}>UPPER CASE ALL!</button>
+      <button onClick={allDone}>All Done</button>
     </>
   );
 }
