@@ -3,6 +3,7 @@ import './App.css'
 import LikeBtn from './LikeBtn'
 import Ludo from './LudoBoard'
 import TodoList from './TodoList'
+import Lotter from './Lottery'
 
 function App() {
  
@@ -10,7 +11,8 @@ function App() {
     <>
    {/* <LikeBtn/> */}
    {/* <Ludo/> */}
-   <TodoList/>
+   {/* <TodoList/> */}
+   <Lotter/>
     </>
   )
 }
