@@ -12,7 +12,7 @@ function App() {
    {/* <LikeBtn/> */}
    {/* <Ludo/> */}
    {/* <TodoList/> */}
-   <Lotter/>
+   <Lotter n={4} winingNum={20}/>
     </>
   )
 }
