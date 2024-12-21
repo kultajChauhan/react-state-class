@@ -4,6 +4,7 @@ import LikeBtn from './LikeBtn'
 import Ludo from './LudoBoard'
 import TodoList from './TodoList'
 import Lotter from './Lottery'
+import Form from './Form'
 
 function App() {
  
@@ -12,7 +13,8 @@ function App() {
    {/* <LikeBtn/> */}
    {/* <Ludo/> */}
    {/* <TodoList/> */}
-   <Lotter n={4} winingNum={20}/>
+   {/* <Lotter n={4} winingNum={20}/> */}
+   <Form/>
     </>
   )
 }
