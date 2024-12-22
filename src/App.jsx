@@ -5,6 +5,7 @@ import Ludo from './LudoBoard'
 import TodoList from './TodoList'
 import Lotter from './Lottery'
 import Form from './Form'
+import CommentForm from './commentForm'
 
 function App() {
  
@@ -14,7 +15,8 @@ function App() {
    {/* <Ludo/> */}
    {/* <TodoList/> */}
    {/* <Lotter n={4} winingNum={20}/> */}
-   <Form/>
+   {/* <Form/> */}
+   <CommentForm/>
     </>
   )
 }
