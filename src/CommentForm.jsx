@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CommentForm() {
+function CommentForm({handleComment}) {
   let [formData, setFormData] = useState({
     username: "",
     comment: "",
@@ -13,10 +13,9 @@ function CommentForm() {
     });
   }
 
-  console.log(formData);
-
   function handleSubmit(event){
     event.preventDefault();
+    handleComment(formData);
     setFormData({
         username: "",
         comment: "",

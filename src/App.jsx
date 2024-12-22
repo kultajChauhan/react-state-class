@@ -6,6 +6,7 @@ import TodoList from './TodoList'
 import Lotter from './Lottery'
 import Form from './Form'
 import CommentForm from './commentForm'
+import Comment from './Comment'
 
 function App() {
  
@@ -16,7 +17,8 @@ function App() {
    {/* <TodoList/> */}
    {/* <Lotter n={4} winingNum={20}/> */}
    {/* <Form/> */}
-   <CommentForm/>
+   {/* <CommentForm/> */}
+   <Comment/>
     </>
   )
 }
