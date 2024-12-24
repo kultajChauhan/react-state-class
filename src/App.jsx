@@ -8,6 +8,7 @@ import Form from './Form'
 import CommentForm from './commentForm'
 import Comment from './Comment'
 import Count from './count'
+import Joker from './Joker'
 
 function App() {
  
@@ -20,7 +21,8 @@ function App() {
    {/* <Form/> */}
    {/* <CommentForm/> */}
    {/* <Comment/> */}
-   <Count/>
+   {/* <Count/> */}
+   <Joker/>
     </>
   )
 }
