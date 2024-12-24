@@ -7,6 +7,7 @@ import Lotter from './Lottery'
 import Form from './Form'
 import CommentForm from './commentForm'
 import Comment from './Comment'
+import Count from './count'
 
 function App() {
  
@@ -18,7 +19,8 @@ function App() {
    {/* <Lotter n={4} winingNum={20}/> */}
    {/* <Form/> */}
    {/* <CommentForm/> */}
-   <Comment/>
+   {/* <Comment/> */}
+   <Count/>
     </>
   )
 }
